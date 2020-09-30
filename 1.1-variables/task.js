@@ -7,9 +7,22 @@
 
 function averageMark(a, g, p) {
 	
-    // реализуйте здесь задание №1
-    
-	return // ваш ответ;
+	let algebra = a;
+	let geography = g;
+	let physics = p;
+	return task1Result = (a + g + p) / 3;
+
+/*	Вывод целого числа оценки. 
+	Возможен вариант с округлением в большую или меньшую сторону,
+	но я его тут не рассматривал.
+	
+	let algebra = a;
+	let geography = g;
+	let physics = p;
+	let task1ResultGeneral = (a + g + p) / 3;
+    let task1Result = task1ResultGeneral - (((a + g + p) / 3) % 1);
+	return task1Result;
+*/
 }
 
 function sayHello(userName) {
