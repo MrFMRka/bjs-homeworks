@@ -12,7 +12,8 @@ function averageMark(a, g, p) {
 	let physics = p;
 	return task1Result = (a + g + p) / 3;
 
-/*	Вывод целого числа оценки. 
+/*	
+	Вывод целого числа оценки. 
 	Возможен вариант с округлением в большую или меньшую сторону,
 	но я его тут не рассматривал.
 	
@@ -26,10 +27,20 @@ function averageMark(a, g, p) {
 }
 
 function sayHello(userName) {
-	
-    let myName = userName;
+	 
+	let myName = userName;
 	let message = `Привет, мир! Меня зовут ${myName}`;	
 	return task2Result = message;
+
+/*	Еще 2 варианта сокращения строк:
+	=== 1 ===
+	let myName = userName;	
+	return task2Result = message = `Привет, мир! Меня зовут ${myName}`;
+
+	=== 2 ===
+	let myName = userName;	
+	return task2Result = `Привет, мир! Меня зовут ${myName}`;
+*/
 }
 
 function calculateFormula() {
