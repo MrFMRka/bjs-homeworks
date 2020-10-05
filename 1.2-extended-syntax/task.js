@@ -10,33 +10,29 @@ function getResult(a,b,c){
     else if (D === 0) {
     	x.push(-b / (2 * a));
     }
-    else if (D < 0) {
-    	x.push();
-    }
     return x;
 }
 
 function getAverageMark(marks){
     let quantity = marks.length;
-    if (quantity > 0) {
-    	if (quantity > 5) {
-    		console.log(`Оценок больше 5-ти.`);
-    		marks.splice(5);
-    		quantity = 5;
-    	}
-    	let sumOfRatings = 0;
-    	for (let mark of marks) {
-    		console.log(mark);
-    		sumOfRatings = sumOfRatings + mark;
-    	}
-    	return sumOfRatings/quantity;
+    if (!quantity > 0) {
+        return 0;
     }
-	else return 0;
+    if (quantity > 5) {
+    	console.log(`Оценок больше 5-ти.`);
+    	marks.splice(5);
+    	quantity = 5;
+    }
+    let sumOfRatings = 0;
+    for (let mark of marks) {
+    	console.log(mark);
+    	sumOfRatings = sumOfRatings + mark;
+    }
+    return sumOfRatings/quantity;
 }
 
-function askDrink(name,dateOfBirthday){   
-    let now = new Date();
-    now = ((now.getFullYear() - dateOfBirthday.getFullYear()) >= 18) ?
+function askDrink(name,dateOfBirthday){ 
+    let now = ((new Date().getFullYear() - dateOfBirthday.getFullYear()) >= 18) ?
              `Не желаете ли олд-фэшн, ${name}?` :        
              `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`;
     return now;
