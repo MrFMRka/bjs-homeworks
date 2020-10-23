@@ -98,11 +98,11 @@ class Library  {
     giveBookByName(bookName) {
       for (let n = 0; n < this.books.length; n ++) {
         if (this.books[n].name === bookName) {
-          return this.books.splice(n, 1)[n];          
+          return this.books.splice(n, 1)[0];          
         }
       }
       return null;
-    }  
+    } 
 }
   
 const library = new Library("Библиотека имени Ленина");
