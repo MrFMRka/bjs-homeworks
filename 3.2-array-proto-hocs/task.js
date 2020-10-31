@@ -16,7 +16,7 @@ function sum(...args) {
 function compareArrays(arr1, arr2) {
   return (
     arr1.length === arr2.length &&
-    arr1.every((item) => arr1.indexOf(item) === arr2.indexOf(item))
+    arr1.every((item, index) => item === arr2[index])
   );
 }
 
@@ -35,13 +35,12 @@ function memorize(fn, limit) {
    }
 
    const result = fn(...argument);   
-   memory.push({ args: Array.from(argument), result: result });
+   memory.push({ args: argument, result });
 
    if (memory.length > limit) {
      memory.shift();
-   }   
-
-   console.log("result from function memorize()");
+   }
+   
    return result;    
   };   
 }

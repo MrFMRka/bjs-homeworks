@@ -20,11 +20,8 @@ function getReliableWeaponsNames(durability) {
 }
 
 function getTotalDamage() {
-  return weapons.reduce((prevValue, curValue) => {
-    return curValue.attack + prevValue;
-  }, 0);
+  return weapons.reduce((prevValue, curValue) => curValue.attack + prevValue, 0);
 }
-
 
 function getValuestCountToSumValues(array, count) {
   let counter = 0;
